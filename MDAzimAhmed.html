@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azim Ahmed Portfolio</title>
+    <style>
+        /* এনিমেটেড গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+        body {
+            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1e3c72);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        /* Header & Profile */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-img {
+            width: 160px; height: 160px;
+            border-radius: 50%;
+            border: 4px solid #00d2ff;
+            box-shadow: 0 0 20px #00d2ff;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .profile-img:hover {
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0 0 40px #3a7bd5;
+        }
+
+        header h1 { margin-top: 15px; font-size: 2.5rem; letter-spacing: 2px; }
+        header p { color: #00d2ff; font-weight: 300; }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.4s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        h2 { font-size: 1.8rem; margin-bottom: 20px; border-left: 5px solid #00d2ff; padding-left: 15px; }
+
+        /* Skills with Glow */
+        .skill-badge {
+            display: inline-block;
+            background: rgba(0, 210, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin: 5px;
+            font-size: 14px;
+            border: 1px solid #00d2ff;
+            transition: 0.3s;
+        }
+
+        .skill-badge:hover {
+            background: #00d2ff;
+            color: #000;
+            box-shadow: 0 0 15px #00d2ff;
+        }
+
+        /* Project UI */
+        .project-item {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 20px;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-item:last-child { border-bottom: none; }
+
+        .project-thumb {
+            width: 100%; height: 100px;
+            border-radius: 12px;
+            object-fit: cover;
+            background: #444;
+        }
+
+        /* Neon Button */
+        .view-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 25px;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+        }
+
+        .view-link:hover {
+            letter-spacing: 2px;
+            box-shadow: 0 0 30px #00d2ff;
+        }
+
+        footer { text-align: center; margin-top: 50px; opacity: 0.6; font-size: 14px; }
+
+        @media (max-width: 600px) {
+            .project-item { grid-template-columns: 1fr; text-align: center; }
+            .project-thumb { width: 150px; margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="profile-container">
+        <img src="profile.jpg.jfif" alt="Profile" class="profile-img">
+    </div>
+    <h1>MD AZIM AHMED</h1>
+    <p>IT & Software Enthusiast | Software Development | System Automation | Problem Solver</p>
+</header>
+
+<div class="container">
+
+    <section class="glass-card">
+        <h2> About me</h2>
+        <p>A professional with experience in technology and computer-based work. Skilled in software development, system automation, and digital tools. Interested in learning new technologies and solving problems.</p>
+    </section>
+    
+    <section class="glass-card">
+        <h2> Skills </h2>
+        <div class="skill-badge">HTML5</div>
+        <div class="skill-badge">CSS3</div>
+        <div class="skill-badge">JavaScript</div>
+        <div class="skill-badge">Web3 Development</div>
+        <div class="skill-badge">React.js</div>
+        <div class="skill-badge">Python Coding</div>
+        <div class="skill-badge">UI/UX Design</div>
+        <div class="skill-badge">Financial Analysis</div>
+        <div class="skill-badge">Ai</div>
+        <div class="skill-badge">Automation</div>
+        <div class="skill-badge">Microsoft PowerPoint</div>
+        <div class="skill-badge">Microsoft Word</div>
+        <div class="skill-badge">Microsoft Excel</div>
+        <div class="skill-badge">Adobe Photoshop</div>
+        <div class="skill-badge">Digital Marketing</div>
+        <div class="skill-badge">Online Community Management</div>
+    </section>
+
+    <section class="glass-card">
+        <h2> Projects</h2>
+        
+        <div class="project-item">
+            <img src="p1.png" alt="P1" class="project-thumb">
+            <div>
+                <h3>স্মার্ট নিউজ অটোমেশন</h3>
+                <p>ঝিনাইদহ দুর্নীতি ডট কম-এর জন্য তৈরি আধুনিক ওয়েব পোর্টাল।</p>
+                <a href="https://your-link-1.com" target="_blank" class="view-link">লাইভ লিঙ্ক দেখুন</a>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="p2.png" alt="P2" class="project-thumb">
+            <div>
+                <h3>ব্লকচেইন ট্র্যাকার</h3>
+                <p>রিয়েল-টাইম ক্রিপ্টোকারেন্সি পোর্টফোলিও ম্যানেজমেন্ট টুল।</p>
+                <a href="https://your-link-2.com" target="_blank" class="view-link">লাইভ লিঙ্ক দেখুন</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="glass-card">
+        <h2> Projects 2 </h2>
+        
+        <div class="project-item">
+            <img src="p1.png" alt="P1" class="project-thumb">
+            <div>
+                <h3>স্মার্ট নিউজ অটোমেশন</h3>
+                <p>ঝিনাইদহ দুর্নীতি ডট কম-এর জন্য তৈরি আধুনিক ওয়েব পোর্টাল।</p>
+                <a href="https://your-link-1.com" target="_blank" class="view-link">লাইভ লিঙ্ক দেখুন</a>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="p2.png" alt="P2" class="project-thumb">
+            <div>
+                <h3>ব্লকচেইন ট্র্যাকার</h3>
+                <p>রিয়েল-টাইম ক্রিপ্টোকারেন্সি পোর্টফোলিও ম্যানেজমেন্ট টুল।</p>
+                <a href="https://your-link-2.com" target="_blank" class="view-link">লাইভ লিঙ্ক দেখুন</a>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <section class="glass-card">
+        <h2>Contact info</h2>
+        <p>📧 Email: ajimm5023@mail.com</p>
+        <p>📱 Mobile: +8801308618044</p>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2026 | Developed with by Azim Ahmed
+</footer>
+
+</body>
+</html>
